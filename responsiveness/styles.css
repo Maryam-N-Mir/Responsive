@@ -1,0 +1,403 @@
+/* RESPONSIVENESS */
+
+/*LOGO*/
+.logo {
+  width: 95px;
+}
+
+.shoes {
+  grid-column: 3;
+  width: 450px;
+  height: auto;
+}
+
+
+
+
+/* COLOUR VARIABLES 
+============================================== */
+:root {
+  --dark: #f3e4e4;
+  --light: #1f1b1b;
+}
+
+
+
+/* BASE STYLES
+============================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 0 0;
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background: var(--light);
+  color: var(--dark);
+  display: grid;
+  align-items: center;
+  font-family:'Open Sans';
+}
+
+img {
+  max-width: 90%;
+  height: auto;
+}
+
+main {
+  padding: 1em;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+
+
+/* HEADER
+================================================================== */
+header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(15px);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 13px;
+  border-bottom: 1px solid var(--dark);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  z-index: 2;
+}
+
+.menu {
+margin-left: auto;
+margin-right: 20px;
+ 
+}
+
+
+
+/* NAVIGATION
+======================================================== */
+ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--light);
+  z-index: 1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  translate: 0 -100vh;
+  opacity: 0%;
+  transition: all 0.5s;
+}
+
+.menu-active nav {
+  translate: 0 0;
+  opacity: 100%;
+}
+
+nav a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  display: block;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  opacity: 50%;
+}
+
+
+
+/* GRID SYSTEM
+============================================== */
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.home-info {
+  margin: auto;
+  margin-left: 500px;
+  line-height: 22px;
+}
+
+.round {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+
+/* TYPOGRAPHY============================================================================================== */
+
+h1 {
+  font-weight: 500;
+  font-size: 58pt;
+  line-height: 120%;
+  text-align: left;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+  font-family: "Prata", serif;
+
+}
+
+h2 {
+  font-size: 45pt;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-left: 30px;
+  border-left: 1.5px solid;
+  text-align: left;
+  margin-top: 240px;
+  margin-bottom: 160px;
+}
+
+h3 {
+  font-size: 16pt;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 90%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+h5 {
+  font-size: 18pt;
+  font-weight: thin;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  text-align: right;
+  border-bottom: 1.5px solid;
+  padding-bottom: 5px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+}
+
+
+p {
+  font-weight: 500;
+  margin: 0 0 1em 0;
+  margin-bottom: 35px;
+  text-align: left;
+
+}
+
+
+/* BUTTONS
+============================================== */
+
+.button {
+  color: #fdecec;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1.5px solid var(--dark);
+  border-radius: 100px;
+  padding: 5px 40px;
+  font-weight: 600;
+  font-size: 12pt;
+  transition: all 0.4s;
+}
+
+.button:hover {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+
+/* CARDS
+============================================== */
+
+.option-1, 
+.option-2, 
+.option-3 {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ebd6c3;
+}
+
+.option-2 {
+  background-color: #af6040;
+}
+
+.option-3 {
+  background-color: #fd3b3b;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 32px 32px 32px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  border-bottom: 2px solid;
+  padding: 30px;
+  position: relative;
+  margin-bottom: 48px;
+  margin: 20px;
+  transition: all 0.3s;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+.price {
+  font-size: 10pt;
+  display: inline;
+  
+}
+
+.add-to-cart {
+  font-size: 10pt;
+  display: inline;
+  float: right;
+  border: 1.5px solid var(--dark);
+  border-radius: 60px;
+  padding: 5px 12px;
+  }
+
+
+.card-pic {
+align-items: center;
+}
+
+
+/* FOOTER
+==================================================================================================== */
+/*top*/
+
+footer h4 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  text-align: center;
+  }
+
+.load-more img {
+display: block;
+margin: 0 auto;
+}
+
+
+.footerlogo img {
+
+  display: block; 
+  margin: 0 auto;
+  padding-top: 180px;
+}
+
+
+/*middle*/
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  place-items: center;
+  padding-bottom: 40px;
+}
+
+
+footer a {
+  display: block;
+  color: inherit;
+}
+
+.collection {
+  align-self:self-start; 
+  padding-left: 500px;
+}
+
+.contact {
+  align-self:self-start; 
+  padding-right: 500px;
+}
+
+
+/*bottom*/
+
+.footer-end {
+text-align: center;
+
+}
+
+input[type="email"] {
+  display: block; /* Make the input a block-level element */
+  margin-bottom: 10px; /* Add margin bottom to create space between input and button */
+  background: transparent;
+  color: inherit;
+  border: solid;
+  border-radius: 100px;
+  border-width: 1.5px;
+  text-align: center;
+  font-size: 14px;
+  margin: auto;
+  padding: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.subcribe {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1.5px solid var(--dark);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 10pt;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.subcribe:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+
+
+.copyright {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
